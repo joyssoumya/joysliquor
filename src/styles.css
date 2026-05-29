@@ -1,0 +1,82 @@
+:root {
+  --gold: #d4af37;
+  --gold-dark: #b8962e;
+  --gold-light: rgba(212, 175, 55, 0.15);
+  --gold-faint: rgba(212, 175, 55, 0.04);
+  --gold-border: rgba(212, 175, 55, 0.12);
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #110e06;
+  --text-primary: #f0e6d0;
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --text-dim: rgba(255, 255, 255, 0.25);
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.3); border-radius: 3px; }
+
+a { color: inherit; text-decoration: none; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.fade-in { animation: fadeInUp 0.6s ease; }
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--bg-primary);
+  border: none;
+  padding: 14px 40px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  transition: all 0.3s;
+}
+
+.btn-gold:hover { transform: scale(1.02); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 14px 40px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  transition: all 0.3s;
+}
+
+.btn-outline:hover { background: var(--gold-light); }
